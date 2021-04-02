@@ -1,4 +1,11 @@
 # trigger:
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'Developer Plan(d9587079-4310-405b-a82f-7c5df5430cd7)'
+    azureContainerRegistry: '{"loginServer":"piermickregistry.azurecr.io", "id" : "/subscriptions/d9587079-4310-405b-a82f-7c5df5430cd7/resourceGroups/piermick-rg/providers/Microsoft.ContainerRegistry/registries/piermickregistry"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
 # - master
   
 pr:
